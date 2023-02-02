@@ -20,6 +20,12 @@ module.exports = {
         },
       },
       {
+        test: /\.ts$/,
+        use: {
+          loader: "ts-loader",
+        },
+      },
+      {
         test: /\.css$/,
         use: [
           "style-loader",
@@ -35,7 +41,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".js"],
+    extensions: [".tsx", ".js", ".ts"],
   },
   plugins: [htmlWebpackPlugin],
 };
